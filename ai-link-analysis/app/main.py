@@ -14,8 +14,6 @@ app = FastAPI(
 
 
 @app.get("/")
-@app.get("/health")
-@app.get("/health-check")
 async def health_check():
     return {"status": "ok", "message": "AI Website Link Analysis API is running"}
 
