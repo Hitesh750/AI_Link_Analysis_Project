@@ -12,12 +12,13 @@ class Competitor(BaseModel):
     strengths: List[str] = Field(default_factory=list)
     weaknesses_or_gaps: List[str] = Field(default_factory=list)
     evidence_status: str = Field(
-    description=(
-        "Indicates the verification status of the competitor information. "
-        "Use 'verified' only when supported by credible fetched sources. "
-        "Otherwise, use 'AI-suggested/unverified'."
+        default="AI-suggested/unverified",
+        description=(
+            "Indicates the verification status of the competitor information. "
+            "Use 'verified' only when supported by credible fetched sources. "
+            "Otherwise, use 'AI-suggested/unverified'."
+        ),
     )
-)
 
 
 
